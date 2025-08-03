@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import FormSection from './components/FormSection';
+import DataTable from './components/DataTable';
+import Counter from './components/Counter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main className="main-content">
+        <section className="container">
+          <h2>Welcome to the Software Testing Demo</h2>
+          <p className="intro-text">
+            This application is designed to help students practice software testing techniques.
+            Below you'll find several interactive components that can be used for testing practice.
+          </p>
+        </section>
+
+        <FormSection />
+        <DataTable />
+        <Counter />
+      </main>
+      
+      <footer className="footer">
+        <div className="container">
+          <p>© {new Date().getFullYear()} Software Testing Demo - Educational Purposes</p>
+        </div>
+      </footer>
     </div>
   );
 }
